@@ -1,6 +1,9 @@
 import pandas as pd
+import datetime
 
 accidents = pd.read_csv("Accidents0515.csv", error_bad_lines=False)
+
+accidents = accidents[(pd.to_datetime(accidents['Date']).dt.date > datetime.date(2011, 1, 1))]
 
 casualties = pd.read_csv("Casualties0515.csv", error_bad_lines=False)
 
