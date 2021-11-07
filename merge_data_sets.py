@@ -17,7 +17,11 @@ print('Merging Accidents, Casualties and Vehicles...')
 
 data = pd.merge(accidents, casualties, on=['Accident_Index'], copy=False).merge(vehicles, on=['Accident_Index'], copy=False)
 
-data = data.drop(columns=['Propulsion_Code', 'Pedestrian_Road_Maintenance_Worker', 'Police_Force', 'Number_of_Casualties', 'Local_Authority_(District)', 'Local_Authority_(Highway)', 'Carriageway_Hazards', 'Special_Conditions_at_Site', 'Did_Police_Officer_Attend_Scene_of_Accident', 'Age_of_Casualty', 'Age_Band_of_Casualty', 'Pedestrian_Movement'])
+data = data.drop(columns=['Propulsion_Code', 'Pedestrian_Road_Maintenance_Worker', 'Police_Force', 'Number_of_Casualties', 
+                          'Local_Authority_(District)', 'Local_Authority_(Highway)', 'Carriageway_Hazards', 'Special_Conditions_at_Site', 
+                          'Did_Police_Officer_Attend_Scene_of_Accident', 'Age_of_Casualty', 'Age_Band_of_Casualty', 'Pedestrian_Movement',
+                          'Towing_and_Articulation', 'Casualty_Home_Area_Type', 'Casualty_Type', 'Bus_or_Coach_Passenger', 'Sex_of_Casualty',
+                          'Pedestrian_Location', 'Car_Passenger'])
 
 
 import math
